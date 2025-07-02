@@ -13,8 +13,17 @@ public class HomeController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index()
-    {
+    public IActionResult Index(string usuarioIngresado, string contraseñaIngresada){
+        if(usuarioIngresado != null && contraseñaIngresada != null){
+        Integrante integrante = BD.verificarCuenta(usuarioIngresado, contraseñaIngresada);
+        HttpContext.Session.SetString("user", Objeto.ObjectToString(integrante));
+        if(integrante != null){
+            ViewBag.DatosUsuario = integrante;
+            return RedirectToAction("Logeado");
+        }
+        } else return View();
+    }
+    public IActionResult Logeado(){
         return View();
     }
 }
