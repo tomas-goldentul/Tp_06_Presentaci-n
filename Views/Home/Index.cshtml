@@ -1,8 +1,22 @@
 ﻿@{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Inicia sesión";
 }
-
+<h1>@ViewBag.Error</h1>
 <div>
-    <h1>Index</h1>
-    <p>Bienvenidos al sitio web de NombreProyecto</p>
+    <form action='@Url.Action("VerificarUsuario", "Home")' method="POST" class="form">
+        <input type="text" 
+            name="usuarioIngresado" 
+            maxlength="20" 
+            
+            placeholder="Ingresá tu usuario" 
+            required 
+            autocomplete="off">
+        <input type="password" 
+            name="contraseñaIngresada" 
+            maxlength="20" 
+            placeholder="Ingresá tu contraseña" 
+            required 
+            autocomplete="off">
+        <button type="submit" id="submit">Log in</button>
+    </form>
 </div>

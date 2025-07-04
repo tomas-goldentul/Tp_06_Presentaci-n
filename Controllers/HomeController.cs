@@ -13,17 +13,51 @@ public class HomeController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index(string usuarioIngresado, string contraseñaIngresada){
-        if(usuarioIngresado != null && contraseñaIngresada != null){
+    public IActionResult Index()
+    {
+        return View();
+    }
+
+
+
+   [HttpPost]
+public IActionResult VerificarUsuario(string usuarioIngresado, string contraseñaIngresada)
+{
+    if (!string.IsNullOrEmpty(usuarioIngresado) && !string.IsNullOrEmpty(contraseñaIngresada))
+    {
         Integrante integrante = BD.verificarCuenta(usuarioIngresado, contraseñaIngresada);
-        HttpContext.Session.SetString("user", Objeto.ObjectToString(integrante));
-        if(integrante != null){
-            ViewBag.DatosUsuario = integrante;
+
+        if (integrante != null)
+        {
+            HttpContext.Session.SetString("integrante", Objeto.ObjectToString(integrante));
             return RedirectToAction("Logeado");
         }
-        } else return View();
+        else
+        {
+            ViewBag.Error = "Usuario o contraseña incorrectos";
+        }
     }
-    public IActionResult Logeado(){
+    else
+    {
+        ViewBag.Error = "Debe completar todos los campos";
+    }
+
+    return View("Index");
+}
+
+
+    public IActionResult Logeado()
+    {
+        if (HttpContext.Session.GetString("integrante") != null)
+        {
+            Integrante integrante = Objeto.StringToObject<Integrante>(HttpContext.Session.GetString("integrante"));
+            ViewBag.username = integrante.Username;
+            ViewBag.nombre = integrante.Nombre;
+            ViewBag.apellido = integrante.Apellido;
+            ViewBag.edad = integrante.Edad;
+            ViewBag.escuela = integrante.Escuela;
+            ViewBag.email = integrante.Email;
+        }
         return View();
     }
 }

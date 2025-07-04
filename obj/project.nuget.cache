@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7unG+IUkVl6ORE0xBZnxalYvJ9EgFso3aejxgD+YbjDXplxlmAGVgOGYXQwgc/+TiWLsLZAueA4khcOyhnyrlA==",
+  "dgSpecHash": "NU0J26SYcgMc9RfOBXsp8M8hDCrLZ+kT3OHj3S7s0Zik9aB7O144qeKANEN2m4nTZ+JR6Yh0GAH4FARmlvM66A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\49319223\\Downloads\\tp_sinnumero\\tp_sinnumero.csproj",
+  "projectFilePath": "C:\\Users\\49319223\\Downloads\\Tp_06_Presentaci-n\\tp_sinnumero.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\49319223\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\49319223\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
