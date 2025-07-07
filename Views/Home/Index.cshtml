@@ -1,6 +1,12 @@
 ﻿@{
     ViewData["Title"] = "Inicia sesión";
 }
+<body class ="index">
+<section>
+<div>
+<h1>Login</h1>
+<p>Ingresa tus datos para ver tu cuenta.</p>
+</div>
 <div>
 <p>@ViewBag.Error</p>
     <form action='@Url.Action("VerificarUsuario", "Home")' method="POST" class="form">
@@ -19,3 +25,6 @@
         <button type="submit" id="submit">Log in</button>
     </form>
 </div>
+</section>
+
+</body>
