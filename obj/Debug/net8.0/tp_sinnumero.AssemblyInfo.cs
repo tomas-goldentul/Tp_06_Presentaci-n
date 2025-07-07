@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("tp_sinnumero")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6497052b5e1f12c1a036bf80ff6e6162c244728f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f3219e1e0b0f2536e7fd234a1925a5b86df9764e")]
 [assembly: System.Reflection.AssemblyProductAttribute("tp_sinnumero")]
 [assembly: System.Reflection.AssemblyTitleAttribute("tp_sinnumero")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -15,6 +15,7 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+          List<Integrante> integrantes = BD.ObtenerIntegrantes();
         return View();
     }
 
@@ -22,30 +23,20 @@ public class HomeController : Controller
 
    [HttpPost]
 public IActionResult VerificarUsuario(string usuarioIngresado, string contraseñaIngresada)
-{
-    if (!string.IsNullOrEmpty(usuarioIngresado) && !string.IsNullOrEmpty(contraseñaIngresada))
     {
         Integrante integrante = BD.verificarCuenta(usuarioIngresado, contraseñaIngresada);
-
         if (integrante != null)
         {
             HttpContext.Session.SetString("integrante", Objeto.ObjectToString(integrante));
             return RedirectToAction("Logeado");
+           
         }
         else
         {
             ViewBag.Error = "Usuario o contraseña incorrectos";
         }
+    return RedirectToAction("Index");
     }
-    else
-    {
-        ViewBag.Error = "Debe completar todos los campos";
-    }
-
-    return View("Index");
-}
-
-
     public IActionResult Logeado()
     {
         if (HttpContext.Session.GetString("integrante") != null)
@@ -59,5 +50,10 @@ public IActionResult VerificarUsuario(string usuarioIngresado, string contraseñ
             ViewBag.email = integrante.Email;
         }
         return View();
+    }
+    public IActionResult Logout()
+    {
+        HttpContext.Session.Clear();
+        return RedirectToAction("Index");
     }
 }

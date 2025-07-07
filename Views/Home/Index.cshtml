@@ -1,13 +1,12 @@
 ﻿@{
     ViewData["Title"] = "Inicia sesión";
 }
-<h1>@ViewBag.Error</h1>
 <div>
+<p>@ViewBag.Error</p>
     <form action='@Url.Action("VerificarUsuario", "Home")' method="POST" class="form">
         <input type="text" 
             name="usuarioIngresado" 
             maxlength="20" 
-            
             placeholder="Ingresá tu usuario" 
             required 
             autocomplete="off">
