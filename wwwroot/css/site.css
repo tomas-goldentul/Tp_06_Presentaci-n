@@ -20,6 +20,7 @@ html {
 }
 
 .logged div {
+  margin-top: 50%;
   background-color: #ffffff;
   padding: 50px;
   border-radius: 10px;
@@ -32,16 +33,19 @@ html {
   margin: 20px;
   font-size: 18px;
   color: #333;
+  border-bottom: 3px solid #3333336b;
+  padding: 2%;
 }
 .logged div a{
   color: #333;
   text-decoration: none;
   padding: 5%;
   background-color: rgb(78, 172, 172) ;
-  box-shadow: 3px 3px 4px rgb(45, 90, 90) ;
+  box-shadow: 3px 3px 8px rgba(47, 131, 124, 0.438);
+  border-radius: 10px;
 }
 .logged div a:hover{
-  box-shadow: inset 3px 3px 4px black;
+  box-shadow: inset 3px 3px 8px rgb(47, 131, 124);
 }
 footer {
   margin-top: 10%;
@@ -103,4 +107,22 @@ button[type="submit"] {
 button[type="submit"]:hover{
   background-color: rgb(69, 143, 143) ;
   cursor: pointer;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+  text-align: center;
 }

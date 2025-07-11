@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\49319223\\Downloads\\Tp_06_Presentaci-n\\tp_sinnumero.csproj": {}
+    "C:\\Users\\48792944\\Downloads\\Tp_06_Presentaci-n\\tp_sinnumero.csproj": {}
   },
   "projects": {
-    "C:\\Users\\49319223\\Downloads\\Tp_06_Presentaci-n\\tp_sinnumero.csproj": {
+    "C:\\Users\\48792944\\Downloads\\Tp_06_Presentaci-n\\tp_sinnumero.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\49319223\\Downloads\\Tp_06_Presentaci-n\\tp_sinnumero.csproj",
+        "projectUniqueName": "C:\\Users\\48792944\\Downloads\\Tp_06_Presentaci-n\\tp_sinnumero.csproj",
         "projectName": "tp_sinnumero",
-        "projectPath": "C:\\Users\\49319223\\Downloads\\Tp_06_Presentaci-n\\tp_sinnumero.csproj",
-        "packagesPath": "C:\\Users\\49319223\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\49319223\\Downloads\\Tp_06_Presentaci-n\\obj\\",
+        "projectPath": "C:\\Users\\48792944\\Downloads\\Tp_06_Presentaci-n\\tp_sinnumero.csproj",
+        "packagesPath": "C:\\Users\\48792944\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\48792944\\Downloads\\Tp_06_Presentaci-n\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\49319223\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\48792944\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
